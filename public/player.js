@@ -22,6 +22,7 @@ elms.forEach(function(elm) {
 var Player = function(playlist) {
   this.playlist = playlist;
   this.index = 0;
+  this.isRandom = false;
 
   // Display the title of the first track.
   track.innerHTML = '1. ' + playlist[0].title;
@@ -151,7 +152,12 @@ Player.prototype = {
         index = self.playlist.length - 1;
       }
     } else {
-      index = self.index + 1;
+      if(self.isRandom){
+        index = self.getRandomIndex();
+      }
+      else{
+        index = self.index + 1;
+      }
       if (index >= self.playlist.length) {
         index = 0;
       }
@@ -267,7 +273,17 @@ Player.prototype = {
     var seconds = (secs - minutes * 60) || 0;
 
     return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+  },
+  
+  
+  getRandomIndex: function () {
+    return Math.floor(Math.random() * this.playlist.length);
+  },
+
+  toggleRandom: function () {
+    this.isRandom = !this.isRandom;
   }
+
 };
 
 // Setup our new audio player class and pass it the playlist.
@@ -297,6 +313,12 @@ playlist.addEventListener('click', function() {
 });
 volumeBtn.addEventListener('click', function() {
   player.toggleVolume();
+});
+btnCancel.addEventListener('click', function() {
+  player.togglePlaylist();
+});
+btnRandom.addEventListener('click', function() {
+  player.toggleRandom();
 });
 volume.addEventListener('click', function() {
   player.toggleVolume();
@@ -379,9 +401,10 @@ window.addEventListener('load', function(){
       var tracks = JSON.parse(xhr.response);
       player = new Player(tracks);
     }
+    resize();
   };
 
   xhr.open('GET', '/list');
   xhr.send();
 });
-resize();
+

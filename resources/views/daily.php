@@ -34,6 +34,14 @@
 
 <!-- Playlist -->
 <div id="playlist">
+    <div class="hide-button">
+        <div id="btnCancel" class="btn-hide-wrapper">
+            <img src="/cancel.svg" alt="">
+        </div>
+        <div id="btnRandom" class="btn-hide-wrapper">
+            <img src="/random.svg" alt="">
+        </div>
+    </div>
     <div id="list"></div>
 </div>
 
