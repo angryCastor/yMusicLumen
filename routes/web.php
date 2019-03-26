@@ -17,7 +17,7 @@ $app->get('/', function ()  {
 
 $app->get('/list', function ()  {
     $query = new MongoDB\Driver\Query(array());
-    $manager = new MongoDB\Driver\Manager("mongodb://root:123@84.201.130.57");
+    $manager = new MongoDB\Driver\Manager(env('DB_MONGO_STRING'));
     $cursor = $manager->executeQuery("container.dailylist", $query);
     $result = array();
     foreach ($cursor as $document) {
