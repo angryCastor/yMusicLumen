@@ -1,0 +1,275 @@
+[2019-03-25 16:16:58] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Route' not found in /var/www/routes/web.php:14
+Stack trace:
+#0 /var/www/bootstrap/app.php(97): require()
+#1 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#2 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#3 /var/www/bootstrap/app.php(98): Laravel\Lumen\Application->group(Array, Object(Closure))
+#4 /var/www/public/index.php(14): require('/var/www/bootst...')
+#5 {main}  
+[2019-03-25 16:20:05] lumen.ERROR: ErrorException: Undefined variable: name in /var/www/storage/framework/views/66e22869be2529c68f8e326741a23c99da14baca.php:3
+Stack trace:
+#0 /var/www/storage/framework/views/66e22869be2529c68f8e326741a23c99da14baca.php(3): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Undefined varia...', '/var/www/storag...', 3, Array)
+#1 /var/www/vendor/illuminate/view/Engines/PhpEngine.php(42): include('/var/www/storag...')
+#2 /var/www/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/storag...', Array)
+#3 /var/www/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/var/www/resour...', Array)
+#4 /var/www/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#5 /var/www/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#6 /var/www/vendor/illuminate/http/Response.php(38): Illuminate\View\View->render()
+#7 /var/www/vendor/symfony/http-foundation/Response.php(206): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(795): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Laravel\Lumen\Application->prepareResponse(Object(Illuminate\View\View))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#11 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#12 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#13 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#14 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#15 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#16 {main}
+
+Next ErrorException: Undefined variable: name (View: /var/www/resources/views/daily.blade.php) in /var/www/storage/framework/views/66e22869be2529c68f8e326741a23c99da14baca.php:3
+Stack trace:
+#0 /var/www/vendor/illuminate/view/Engines/PhpEngine.php(44): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 1)
+#1 /var/www/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/storag...', Array)
+#2 /var/www/vendor/illuminate/view/View.php(137): Illuminate\View\Engines\CompilerEngine->get('/var/www/resour...', Array)
+#3 /var/www/vendor/illuminate/view/View.php(120): Illuminate\View\View->getContents()
+#4 /var/www/vendor/illuminate/view/View.php(85): Illuminate\View\View->renderContents()
+#5 /var/www/vendor/illuminate/http/Response.php(38): Illuminate\View\View->render()
+#6 /var/www/vendor/symfony/http-foundation/Response.php(206): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(795): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Laravel\Lumen\Application->prepareResponse(Object(Illuminate\View\View))
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#11 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#12 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#13 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#14 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#15 {main}  
+[2019-03-25 16:36:25] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 16:47:13] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 16:51:21] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 16:51:23] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 16:51:30] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 16:51:43] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 16:57:00] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 16:57:26] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 16:57:33] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 16:58:43] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:20
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 17:00:14] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 17:00:22] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'MongoClient' not found in /var/www/routes/web.php:19
+Stack trace:
+#0 [internal function]: Closure->{closure}()
+#1 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#4 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#5 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#11 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#12 {main}  
+[2019-03-25 17:06:19] lumen.ERROR: MongoDB\Driver\Exception\InvalidArgumentException: MongoDB\Driver\Query::__construct() expects at least 1 parameter, 0 given in /var/www/routes/web.php:19
+Stack trace:
+#0 /var/www/routes/web.php(19): MongoDB\Driver\Query->__construct()
+#1 [internal function]: Closure->{closure}()
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#4 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#5 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#11 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#12 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#13 {main}  
+[2019-03-25 17:18:00] lumen.ERROR: ErrorException: MongoDB\Driver\Manager::executeQuery() expects at least 2 parameters, 1 given in /var/www/routes/web.php:21
+Stack trace:
+#0 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(2, 'MongoDB\\Driver\\...', '/var/www/routes...', 21, Array)
+#1 /var/www/routes/web.php(21): MongoDB\Driver\Manager->executeQuery('container.daily...')
+#2 [internal function]: Closure->{closure}()
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#4 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#6 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#11 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#12 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#13 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#14 {main}  
+[2019-03-25 17:18:12] lumen.ERROR: MongoDB\Driver\Exception\AuthenticationException: The SCRAM_SHA_256 authentication mechanism requires libmongoc built with ENABLE_SSL in /var/www/routes/web.php:21
+Stack trace:
+#0 /var/www/routes/web.php(21): MongoDB\Driver\Manager->executeQuery('container.daily...', Object(MongoDB\Driver\Query))
+#1 [internal function]: Closure->{closure}()
+#2 /var/www/vendor/illuminate/container/BoundMethod.php(29): call_user_func_array(Object(Closure), Array)
+#3 /var/www/vendor/illuminate/container/BoundMethod.php(75): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#4 /var/www/vendor/illuminate/container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Object(Closure), Object(Closure))
+#5 /var/www/vendor/illuminate/container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Object(Closure), Array, NULL)
+#6 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(654): Illuminate\Container\Container->call(Object(Closure), Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#8 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#9 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#10 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#11 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#12 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#13 {main}  
